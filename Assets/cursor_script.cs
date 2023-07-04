@@ -6,6 +6,14 @@ using UnityEngine.UIElements;
 public class cursor_script: MonoBehaviour
 {
 
+    public GameObject projectile;
+    public Rigidbody2D player;
+
+    private void Start()
+    {
+        
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -14,7 +22,7 @@ public class cursor_script: MonoBehaviour
         transform.position = mousePosition;
 
         if (Input.GetKeyDown(KeyCode.Mouse0)) {
-            Debug.Log("User Clicked");
+            Instantiate(projectile, new Vector3(player.transform.position.x, player.transform.position.y, 0), transform.rotation);
         }
     }
 }

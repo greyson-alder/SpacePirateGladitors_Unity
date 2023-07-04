@@ -225,9 +225,10 @@ GameObject:
   m_Component:
   - component: {fileID: 712329384}
   - component: {fileID: 712329385}
-  m_Layer: 0
+  - component: {fileID: 712329386}
+  m_Layer: 5
   m_Name: Cursor
-  m_TagString: Untagged
+  m_TagString: Cursor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -299,6 +300,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &712329386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 712329383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61cfd3c3cca83ae499756c474b14f15b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 7455547075126379055, guid: db588730e5972fc48aa649e2a22d06ab, type: 3}
+  player: {fileID: 1340248850}
 --- !u!1 &1340248847
 GameObject:
   m_ObjectHideFlags: 0
@@ -312,9 +327,9 @@ GameObject:
   - component: {fileID: 1340248851}
   - component: {fileID: 1340248850}
   - component: {fileID: 1340248852}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
