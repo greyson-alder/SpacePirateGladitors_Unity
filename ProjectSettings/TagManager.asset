@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Cursor
   - Projectile
+  - Main
+  - Mob
   layers:
   - Default
   - TransparentFX
@@ -14,7 +16,7 @@ TagManager:
   - Water
   - UI
   - Projectiles
-  - 
+  - Mobs
   - 
   - 
   - 
@@ -42,4 +44,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Terrain
+    uniqueID: 4074939511
+    locked: 0
+  - name: Mobs
+    uniqueID: 518861311
+    locked: 0
+  - name: Player
+    uniqueID: 566314047
     locked: 0
