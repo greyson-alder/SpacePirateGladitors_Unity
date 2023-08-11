@@ -13,8 +13,6 @@ public class cursor_script: MonoBehaviour
     {
         
     }
-
-    // Update is called once per frame
     void Update()
     {
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);

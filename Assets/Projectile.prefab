@@ -165,5 +165,6 @@ MonoBehaviour:
   player: {fileID: 0}
   rb: {fileID: 8866465875838657196}
   collidorObject: {fileID: 4712152913092236113}
-  projectileSpeed: 10
+  spriteRenderer: {fileID: 8118030686566052930}
   mainLogic: {fileID: 0}
+  projectileSpeed: 10

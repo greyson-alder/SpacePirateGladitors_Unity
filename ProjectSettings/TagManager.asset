@@ -8,6 +8,8 @@ TagManager:
   - Projectile
   - Main
   - Mob
+  - Spawner
+  - HUD
   layers:
   - Default
   - TransparentFX

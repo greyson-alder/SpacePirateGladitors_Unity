@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class projectile_script : MonoBehaviour
@@ -8,9 +9,14 @@ public class projectile_script : MonoBehaviour
     public player_script player;
     public Rigidbody2D rb;
     public CircleCollider2D collidorObject;
-    private Vector2 headingDirection;
-    public float projectileSpeed;
+    public SpriteRenderer spriteRenderer;
     public MainScript mainLogic;
+    public float projectileSpeed;
+
+    private Vector2 _headingDirection;
+    private Element _projectileElement;
+    private Color _color;
+
     private float projectileLifetime = 1000;
 
     // Start is called before the first frame update
@@ -26,7 +32,12 @@ public class projectile_script : MonoBehaviour
         Vector2 playerLocation = player.transform.position;
         Vector2 cursorLocation = cursor.transform.position;
 
-        headingDirection = (cursorLocation - playerLocation).normalized;
+        _headingDirection = (cursorLocation - playerLocation).normalized;
+        _projectileElement = mainLogic.bulletElement;
+
+        _color = _projectileElement.getElementColour();
+        // Debug.Log(_projectileElement);
+        spriteRenderer.color = _color;
 
     }
 
@@ -42,7 +53,7 @@ public class projectile_script : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.MovePosition((Vector2)transform.position + headingDirection * projectileSpeed * Time.fixedDeltaTime);
+        rb.MovePosition((Vector2)transform.position + _headingDirection * projectileSpeed * Time.fixedDeltaTime);
 
     }
 
