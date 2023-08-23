@@ -7,6 +7,7 @@ public class MainScript : MonoBehaviour
     public float bulletSpeed = 1;
     public float bulletDamage = 10;
     public Element bulletElement = Element.Flame;
+    public float bulletScale = 2;
 
 }
 

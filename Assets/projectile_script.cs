@@ -12,6 +12,7 @@ public class projectile_script : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public MainScript mainLogic;
     public float projectileSpeed;
+    public float projectileScale;
 
     private Vector2 _headingDirection;
     private Element _projectileElement;
@@ -28,6 +29,7 @@ public class projectile_script : MonoBehaviour
         mainLogic = GameObject.FindGameObjectWithTag("Main").GetComponent<MainScript>();
 
         projectileSpeed = mainLogic.bulletSpeed;
+        projectileScale = mainLogic.bulletScale;
 
         Vector2 playerLocation = player.transform.position;
         Vector2 cursorLocation = cursor.transform.position;
@@ -38,6 +40,7 @@ public class projectile_script : MonoBehaviour
         _color = _projectileElement.getElementColour();
         // Debug.Log(_projectileElement);
         spriteRenderer.color = _color;
+        spriteRenderer.transform.localScale = Vector3.one * projectileScale;
 
     }
 
